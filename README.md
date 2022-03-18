@@ -24,8 +24,6 @@ Automation Basic Framework in order to work properly uses a number of dependenci
 * [NodeJS](https://nodejs.org/en/) - As an asynchronous event driven JavaScript runtime, Node is designed to build scalable network applications.
 * [Playwright](https://playwright.dev/) - Playwright supports all modern rendering engines including Chromium, WebKit, and Firefox.
 <br />
-<br />
-<br />
 
 # To Get Started with complete new project
 ## Installation
@@ -53,8 +51,6 @@ npm init playwright@latest new-project
 ```
 
 * This will create a configuration file, optionally add examples, a GitHub Action workflow and a first test example.spec.ts.
-<br />
-<br />
 <br />
 
 # To Get Started with this project
@@ -165,7 +161,6 @@ Running 5 tests using 5 workers
 ```
 
 * For more details you can see on playwright page [configuration](https://playwright.dev/docs/test-configuration).
-<br />
 <br />
 
 # Run reports
