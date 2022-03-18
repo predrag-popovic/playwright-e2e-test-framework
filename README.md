@@ -15,7 +15,6 @@ You can also:
   - Enjoy context isolation out of the box.
   - Capture videos, screenshots and other artifacts on failure.
   - Integrate your POMs as extensible fixtures.
-<br />
 
   ### Tech
 
@@ -51,7 +50,6 @@ npm init playwright@latest new-project
 ```
 
 * This will create a configuration file, optionally add examples, a GitHub Action workflow and a first test example.spec.ts.
-<br />
 
 # To Get Started with this project
 
@@ -66,7 +64,6 @@ https://nodejs.org/en/download/
 2.Chrome or Firefox browsers installed.
 
 3.Text Editor(Optional) installed-->Sublime/Visual Studio Code.
-<br />
 
 ## Run Scripts
 * Clone the repository into a folder
@@ -75,7 +72,6 @@ https://nodejs.org/en/download/
 ```
 npm install
 ```
-<br />
 
 # Run test with following command
 * Run all the tests
@@ -93,7 +89,6 @@ npx playwright test tests/todo-page.spec.ts
 ```
 npx playwright test --headed
 ```
-<br />
 
 # Configuration file
 * To enjoy all the features that Playwright Test has to offer, you would want to create a configuration file playwright.config.ts (or playwright.config.js). It allows you to run tests in multiple browsers configured as you'd like.
@@ -138,7 +133,6 @@ Running 5 tests using 5 workers
   ✓ [firefox] › example.spec.ts:3:1 › basic test (2s)
   ✓ [webkit] › example.spec.ts:3:1 › basic test (2s)
 ```
-<br />
 
 # Configure NPM scripts
 * Playwright Test will automatically pick up playwright.config.js or playwright.config.ts.
@@ -161,7 +155,6 @@ Running 5 tests using 5 workers
 ```
 
 * For more details you can see on playwright page [configuration](https://playwright.dev/docs/test-configuration).
-<br />
 
 # Run reports
 
@@ -200,10 +193,8 @@ Running 124 tests using 6 workers
   ✓ should handle env beforeEach error (638ms)
     should respect enclosing .gitignore:
 ```
-<br />
 
 ## Line reporter
-<br />
 
 * Line reporter is more concise than the list reporter. It uses a single line to report last finished test, and prints failures when they occur. Line reporter is useful for large test suites where it shows the progress but does not spam the output by listing all the tests.
 ```
@@ -235,10 +226,8 @@ Running 124 tests using 6 workers
 
 [23/124] gitignore.spec.ts - should respect nested .gitignore
 ```
-<br />
 
 ## HTML reporter
-<br />
 
 * HTML reporter produces a self-contained folder that contains report for the test run that can be served as a web page.
 * By default, HTML report is opened automatically if some of the tests failed. You can control this behavior via the open property in the Playwright config. The possible values for that property are always, never and on-failure (default).
@@ -261,10 +250,8 @@ npx playwright show-report
 ```
 npx playwright show-report my-report
 ```
-<br />
 
 ## Allure reporter
-<br />
 
 ```
 # Install
