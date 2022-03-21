@@ -156,6 +156,60 @@ Running 5 tests using 5 workers
 
 * For more details you can see on playwright page [configuration](https://playwright.dev/docs/test-configuration).
 
+# Input
+
+## Text input
+* This is the easiest way to fill out the form fields. It focuses the element and triggers an input event with the entered text. It works for <input>, <textarea>, [contenteditable] and <label> associated with an input or textarea.
+```
+// Text input
+await page.fill('#name', 'Peter');
+
+// Date input
+await page.fill('#date', '2020-02-02');
+
+// Time input
+await page.fill('#time', '13:15');
+
+// Local datetime input
+await page.fill('#local', '2020-03-02T05:15');
+
+// Input through label
+await page.fill('text=First Name', 'Peter');
+```
+  
+## Mouse click
+
+* Performs a simple human click.
+  
+```
+// Generic click
+await page.click('button#submit');
+
+// Double click
+await page.dblclick('#item');
+
+// Right click
+await page.click('#item', { button: 'right' });
+
+// Shift + click
+await page.click('#item', { modifiers: ['Shift'] });
+
+// Hover over element
+await page.hover('#item');
+
+// Click the top left corner
+await page.click('#item', { position: { x: 0, y: 0} });
+```
+
+* Under the hood, this and other pointer-related methods:
+
+    - wait for element with given selector to be in DOM
+    - wait for it to become displayed, i.e. not empty, no display:none, no visibility:hidden
+    - wait for it to stop moving, for example, until css transition finishes
+    - scroll the element into view
+    - wait for it to receive pointer events at the action point, for example, waits until element becomes non-obscured by other elements
+    - retry if the element is detached during any of the above checks
+
 # Page Object Model
 
 * Page Object Model is a common pattern that introduces abstractions over web app pages to simplify interactions with them in multiple tests. It is best explained by an example.
