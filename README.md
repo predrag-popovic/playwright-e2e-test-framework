@@ -210,6 +210,8 @@ await page.click('#item', { position: { x: 0, y: 0} });
     - wait for it to receive pointer events at the action point, for example, waits until element becomes non-obscured by other elements
     - retry if the element is detached during any of the above checks
 
+* More informations you can find on the [Input page](https://playwright.dev/docs/input).
+
 # Page Object Model
 
 * Page Object Model is a common pattern that introduces abstractions over web app pages to simplify interactions with them in multiple tests. It is best explained by an example.
