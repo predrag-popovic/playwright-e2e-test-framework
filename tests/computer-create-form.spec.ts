@@ -6,9 +6,9 @@ import { computerCreateForm } from '../page/computer-create-form';
 test.describe('Computer data base - Create form', () => {
 
     test.beforeEach(async ({ page }) => {
-        const openComputerList = new browser(page);
+        const computerList = new browser(page);
         const createForm = new computerCreateForm(page);
-        await openComputerList.goto();
+        await computerList.openPage();
         await createForm.clickOnAddNewComputerButton();
     });
 
