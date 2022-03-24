@@ -10,7 +10,7 @@ export class browser {
     this.page = page;
   }
 
-  async goto() {
+  async openPage() {
     await this.page.goto(prop.get('envURL'));
   }
 
