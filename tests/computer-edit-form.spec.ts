@@ -6,9 +6,9 @@ import { computerEditForm } from '../page/computer-edit-form';
 test.describe('Computer data base - Create form', () => {
 
     test.beforeEach(async ({ page }) => {
-        const openComputerList = new browser(page);
+        const computerList = new browser(page);
         const editForm = new computerEditForm(page);
-        await openComputerList.goto();
+        await computerList.openPage();
         await editForm.searchComputerNameFromList();
         await editForm.chooseComputerNameFromList();
     });
